@@ -1,0 +1,36 @@
+@mixin border-radius($radius){
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    -ms-border-radius: $radius;
+    border-radius: $radius;
+}
+
+$textColor: rgb(250,250,250);
+$textColorHover: rgb(90,0,0);
+
+.container {
+    @include border-radius(10px);
+    border: groove 1px rgba(30,30,30,0.8);
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: rgba(30,30,30,0.8);
+    color: $textColor;
+    padding: 10px;
+    margin: 10px;
+}
+.click {
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgba(130,130,130,0.6);
+}
+
+.instructions {
+    @extend .container;
+    display: flex;
+    flex-direction: column;
+}
+
+.title {
+    @extend .container;
+}
